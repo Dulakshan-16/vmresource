@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Mono:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;400;500;600;700;800;900&display=swap");
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #091B32;
+  border-radius: 100px;
+}
+
+.container {
+  z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.flip-box {
+  margin: 0rem 5rem 5rem 5rem;
+  background-color: transparent;
+  width: 500px;
+  height: 300px;
+  -webkit-perspective: 800px;
+          perspective: 800px;
+  margin-top: 30px;
+}
+
+.flip-box-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transition: -webkit-transform 0.8s;
+  transition: -webkit-transform 0.8s;
+  transition: transform 0.8s;
+  transition: transform 0.8s, -webkit-transform 0.8s;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+.flip-box.hover .flip-box-inner {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.flip-box-front, .flip-box-back {
+  border-radius: 10px;
+  overflow: hidden !important;
+  position: absolute;
+  width: 500px;
+  height: 300px;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-box-front .front-heading, .flip-box-back .front-heading {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 2.5rem;
+}
+
+.flip-box-front .font-text, .flip-box-back .font-text {
+  overflow-y: scroll;
+  height: 200px !important;
+}
+
+.flip-box-front {
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 2rem;
+  overflow: scroll;
+  background-color: rgba(1, 55, 117, 0.253);
+  -webkit-box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+          box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  color: #c7c7c7;
+}
+
+.flip-box-back {
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  overflow: scroll;
+  padding: 2rem;
+  background-color: rgba(1, 55, 117, 0.253);
+  -webkit-box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+          box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  color: #b1b1b1;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-left: -13.5%;
+}
+
+.flip-box-back a {
+  font-size: 0.8rem;
+  margin-top: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.flip-box-back a:link {
+  color: #9c9c9c;
+}
+
+.flip-box-back a:visited {
+  color: #008ddf;
+}
+
+.flip-box-back a:hover {
+  color: #69c8ff;
+}
+
+.flip-box-back a:active {
+  color: blue;
+}
+
+p {
+  line-height: 1.7rem;
+}
+
+@media screen and (max-width: 500px) {
+  .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .flip-box {
+    margin: 0rem 5rem 7rem 0rem;
+  }
+}
+/*# sourceMappingURL=page2.css.map */

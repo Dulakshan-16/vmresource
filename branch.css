@@ -1,0 +1,21 @@
+circle {
+	fill: transparent;
+}
+svg {
+	position: absolute;
+	top: 10vw;
+	left: 0;
+}
+svg circle,
+path {
+	stroke-width: 5;
+}
+svg * {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.branch {
+	position: absolute;
+}
+

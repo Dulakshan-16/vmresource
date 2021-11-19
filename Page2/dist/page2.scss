@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;400;500;600;700;800;900&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+}
+
+// Scroll bar
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #091B32;
+    border-radius: 100px;
+}
+// Scroll bar end
+
+.container {
+    z-index: 1;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.flip-box {
+    margin:0rem 5rem 5rem 5rem;
+    background-color: transparent;
+    width: 500px;
+    height: 300px;
+    perspective: 800px;
+    margin-top: 30px;
+}
+
+.flip-box-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-origin: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.flip-box.hover .flip-box-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-box-front, .flip-box-back {
+    border-radius: 10px;
+    overflow: hidden !important;
+    .front-heading {
+        text-align: center;
+        margin-top: 2rem;
+        font-size: 2.5rem;
+    }
+    .font-text{
+        overflow-y: scroll;
+        height: 200px !important;
+    }
+    position: absolute;
+    width: 500px;
+    height: 300px;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+
+.flip-box-front {
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    padding:2rem;
+    overflow: scroll;
+    background-color: rgba(1, 55, 117, 0.253);
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    color: rgb(199, 199, 199);
+}
+.flip-box-back {
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    overflow: scroll;
+    padding:2rem;
+    background-color: rgba(1, 55, 117, 0.253);
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    color: rgb(177, 177, 177);
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    margin-left: -13.5%;
+  a { 
+    font-size: 0.8rem;
+    margin-top: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  a:link {
+    color: rgb(156, 156, 156);
+  }
+  a:visited {
+    color: rgb(0, 141, 223);
+  }
+  a:hover {
+    color: rgb(105, 200, 255);
+  }
+  a:active {
+    color: blue;
+  }
+}
+p {
+    line-height: 1.7rem;
+}
+@media screen and (max-width:500px) {
+    .container{
+        flex-direction: column;
+    }
+    .flip-box {
+        margin: 0rem 5rem 7rem 0rem;
+    }
+}

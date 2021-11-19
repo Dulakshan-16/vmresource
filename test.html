@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
+		<style>
+			@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap");
+
+			body {
+				min-height: 100vh;
+				display: flex;
+				flex-direction: column;
+				flex-wrap: wrap;
+				align-content: center;
+				justify-content: center;
+				font-family: "Source Sans Pro", sans-serif;
+				font-size: 1.6rem;
+			}
+
+			p {
+				margin: 0.2rem;
+			}
+
+			svg {
+				width: 80vw;
+			}
+		</style>
+	</head>
+	<body>
+		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 403.44 74.33">
+			<path
+				class="squiggle"
+				fill="none"
+				stroke="#bc85ff"
+				stroke-miterlimit="10"
+				stroke-width="18"
+				d="M14.2 65.54s36-36.79 56.31-35.66 38.6 27.31 58.13 26.56 26.34-5.91 37.6-13 30.53-19.52 39.48-19.14 19.48 8.23 31.12 19.87 18.91 13.2 25.25 13.16S278.24 58 297 40.76s25.86-17.86 31.49-17.86 48.11 15.42 65 13.27"
+			/>
+		</svg>
+		<script>
+			gsap.registerPlugin(DrawSVGPlugin);
+			gsap.to(".squiggle", { duration: 2, drawSVG: "0% 100%" });
+		</script>
+	</body>
+</html>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="ScreenOrientation" content="autoRotate:disabled" />
+		<title>Cards</title>
+		<link rel="stylesheet" href="index.css" />
+		<link rel="stylesheet" href="branch.css" />
+
+		<script src="http://code.jquery.com/jquery-1.8.2.js"></script>
+		<script src="https://d3js.org/d3.v5.min.js"></script>
+		<script type="text/javascript" src="branchInfo.js" defer></script>
+		<script type="text/javascript" src="createBranch.js" defer></script>
+		<script type="text/javascript" src="branchAnimation.js" defer></script>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"
+			integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		></script>
+	</head>
+	<body>
+		<div class="onload">
+			<svg viewBox="0 0 1320 300">
+				<text x="50%" y="0" dy=".35em" text-anchor="middle">
+					Virtual Museum
+				</text>
+			</svg>
+		</div>
+		<audio
+			src="windowsStartUp.mp3"
+			id="my_audio"
+			autoplay="autoplay"
+			allow="autoplay"
+		></audio>
+
+		<div id="card-container">
+			<section class="card-list">
+				<article class="card">
+					<header class="card-header">
+						<p>VM resource</p>
+						<h2 id="phy">Science</h2>
+						<br /><br />
+						<p class="briefing">
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+							eiusmod tempor incididunt ut labore et dolore magna aliqua. Odio
+							pellentesque diam volutpat commodo sed. Vel orci porta non
+							pulvinar neque laoreet suspendisse interdum consectetur. Nullam
+							vehicula ipsum a arcu. Sit amet tellus cras adipiscing enim eu
+							turpis.
+						</p>
+						<div class="box">
+							<img src="chemistry.png" alt="Icon by Eucalyp" />
+							<div class="button button1">
+								<a href="#">
+									<button>
+										<span>Explore</span>
+									</button>
+								</a>
+							</div>
+							<div class="branch"></div>
+						</div>
+					</header>
+					<div class="card-author">
+						<div class="author-name">
+							<div title="Eucalyp" class="author-name-prefix">Icon</div>
+							By Eucalyp
+						</div>
+					</div>
+				</article>
+
+				<article class="card">
+					<header class="card-header">
+						<p>VM resource</p>
+						<h2 id="art">Arts</h2>
+						<br /><br />
+						<p class="briefing">
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+							eiusmod tempor incididunt ut labore et dolore magna aliqua. Odio
+							pellentesque diam volutpat commodo sed. Vel orci porta non
+							pulvinar neque laoreet suspendisse interdum consectetur. Nullam
+							vehicula ipsum a arcu. Sit amet tellus cras adipiscing enim eu
+							turpis.
+						</p>
+						<div class="box">
+							<img src="painting.png" alt="Icon By monkik" />
+							<div class="button button2">
+								<button>
+									<span>Explore</span>
+								</button>
+							</div>
+							<div class="branch"></div>
+						</div>
+					</header>
+					<div class="card-author">
+						<div class="author-name">
+							<div title="monkik" class="author-name-prefix">Icon</div>
+							By monkik
+						</div>
+					</div>
+				</article>
+
+				<article class="card">
+					<header class="card-header">
+						<p>VM resource</p>
+						<h2 id="tech">Technology</h2>
+						<br /><br />
+						<p class="briefing">
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+							eiusmod tempor incididunt ut labore et dolore magna aliqua. Odio
+							pellentesque diam volutpat commodo sed. Vel orci porta non
+							pulvinar neque laoreet suspendisse interdum consectetur. Nullam
+							vehicula ipsum a arcu. Sit amet tellus cras adipiscing enim eu
+							turpis.
+						</p>
+						<div class="box">
+							<img src="computer.png" alt="Icon By Eucalyp" />
+							<div class="button button3">
+								<button>
+									<span>Explore</span>
+								</button>
+							</div>
+							<div class="branch"></div>
+						</div>
+					</header>
+					<div class="card-author">
+						<div class="author-name">
+							<div title="Eucalyp" class="author-name-prefix">Icon</div>
+							By Eucalyp
+						</div>
+					</div>
+				</article>
+				<article class="card">
+					<header class="card-header">
+						<p>VM resource</p>
+						<h2 id="bussi">Bussiness Studies</h2>
+						<br /><br />
+						<p class="briefing">
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+							eiusmod tempor incididunt ut labore et dolore magna aliqua. Odio
+							pellentesque diam volutpat commodo sed. Vel orci porta non
+							pulvinar neque laoreet suspendisse interdum consectetur. Nullam
+							vehicula ipsum a arcu. Sit amet tellus cras adipiscing enim eu
+							turpis.
+						</p>
+						<div class="box">
+							<img src="suit.png" alt="Icon By Freepik" />
+							<div class="button button4">
+								<button>
+									<span>Explore</span>
+								</button>
+							</div>
+							<div class="branch"></div>
+						</div>
+					</header>
+					<div class="card-author">
+						<div class="author-name">
+							<div title="Freepik" class="author-name-prefix">Icon</div>
+							By Freepik
+						</div>
+					</div>
+				</article>
+			</section>
+		</div>
+		<script type="text/javascript">
+			window.onload = function () {
+				if ($(window).width() < 1366) {
+					var buttons = $(".button");
+					for (var i = 0; i < cards.length; i++) {
+						var link = "#";
+						buttons[i].setAttribute("onclick", "");
+						buttons[i].setAttribute("href", link);
+					}
+				}
+			};
+		</script>
+	</body>
+</html>
